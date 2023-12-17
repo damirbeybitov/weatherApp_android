@@ -60,11 +60,17 @@ class CurrentWeatherFragment : Fragment() {
     private fun displayWeatherData(weatherResponse: WeatherResponse) {
         binding.textViewCityName.text = "City: ${weatherResponse.name}"
         binding.textViewTemperature.text = "Temperature: ${String.format("%.1f", weatherResponse.main.temp)}°C"
-        binding.textViewCondition.text = "Condition: ${weatherResponse.weather[0].main} - ${weatherResponse.weather[0].description}"
+        binding.textViewCondition.text = "Condition: ${weatherResponse.weather[0].main} (${weatherResponse.weather[0].description})"
         binding.textViewVisibility.text = "Visibility: ${weatherResponse.visibility / 1000.0} km"
         binding.textViewWindSpeed.text = "Wind Speed: ${weatherResponse.wind.speed} m/s"
         binding.textViewWindDirection.text = "Direction: ${weatherResponse.wind.deg}°"
         binding.textViewWindGust.text = "Gust: ${weatherResponse.wind.gust} m/s"
+        binding.textViewFeelsLike.text = "Feels Like: ${String.format("%.1f", weatherResponse.main.feelsLike)}°C"
+        binding.textViewTempMin.text = "Min Temp: ${String.format("%.1f", weatherResponse.main.tempMin)}°C"
+        binding.textViewTempMax.text = "Max Temp: ${String.format("%.1f", weatherResponse.main.tempMax)}°C"
+        binding.textViewPressure.text = "Pressure: ${weatherResponse.main.pressure} hPa"
+        binding.textViewHumidity.text = "Humidity: ${weatherResponse.main.humidity}%"
+
         // Add more TextView updates here for other data like pressure, humidity, etc.
     }
 
