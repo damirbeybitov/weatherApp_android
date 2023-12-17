@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.finalproject.databinding.FragmentCityDetailsBinding
 
 class CityDetailsFragment : Fragment() {
@@ -29,6 +30,14 @@ class CityDetailsFragment : Fragment() {
         binding.textViewCityName.text = city.name
         binding.textViewCityDescription.text = city.description
         // Setup buttons for weather now and 5-day forecast
+        binding.buttonWeatherNow.setOnClickListener {
+            navigateToCurrentWeather()
+        }
+    }
+    private fun navigateToCurrentWeather() {
+        // Implement navigation logic
+        val action = CityDetailsFragmentDirections.actionCityDetailsFragmentToCurrentWeatherFragment(city.name)
+        findNavController().navigate(action)
     }
 
     override fun onDestroyView() {

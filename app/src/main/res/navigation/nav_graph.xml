@@ -34,6 +34,21 @@
         <argument
             android:name="city"
             app:argType="com.example.finalproject.City" />
+        <action
+            android:id="@+id/action_cityDetailsFragment_to_currentWeatherFragment"
+            app:destination="@id/currentWeatherFragment" />
+
+    </fragment>
+
+    <!-- CurrentWeatherFragment -->
+    <fragment
+        android:id="@+id/currentWeatherFragment"
+        android:name="com.example.finalproject.CurrentWeatherFragment"
+        android:label="fragment_current_weather"
+        tools:layout="@layout/fragment_current_weather">
+        <argument
+            android:name="cityName"
+            app:argType="string" />
     </fragment>
 
     <!-- Add more fragments and actions as your app grows -->
