@@ -58,10 +58,14 @@ class CurrentWeatherFragment : Fragment() {
         Toast.makeText(context, errorMessage, Toast.LENGTH_LONG).show()
     }
     private fun displayWeatherData(weatherResponse: WeatherResponse) {
-        // Update UI with weather data
-        binding.textViewWeatherInfo.text = "City: ${weatherResponse.name}\n" +
-                "Temperature: ${weatherResponse.main.temp}°C\n" +
-                "Condition: ${weatherResponse.weather[0].main} - ${weatherResponse.weather[0].description}"
+        binding.textViewCityName.text = "City: ${weatherResponse.name}"
+        binding.textViewTemperature.text = "Temperature: ${String.format("%.1f", weatherResponse.main.temp)}°C"
+        binding.textViewCondition.text = "Condition: ${weatherResponse.weather[0].main} - ${weatherResponse.weather[0].description}"
+        binding.textViewVisibility.text = "Visibility: ${weatherResponse.visibility / 1000.0} km"
+        binding.textViewWindSpeed.text = "Wind Speed: ${weatherResponse.wind.speed} m/s"
+        binding.textViewWindDirection.text = "Direction: ${weatherResponse.wind.deg}°"
+        binding.textViewWindGust.text = "Gust: ${weatherResponse.wind.gust} m/s"
+        // Add more TextView updates here for other data like pressure, humidity, etc.
     }
 
     override fun onDestroyView() {

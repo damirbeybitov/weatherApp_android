@@ -1,20 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp">
 
     <TextView
-        android:id="@+id/textViewWeatherInfo"
+        android:id="@+id/textViewCityName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Weather Information"
-        android:textSize="18sp"
+        android:text="City"
+        android:textSize="20sp"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <!-- Additional UI elements to display weather details like temperature, condition, etc. -->
+    <!-- Additional TextViews for each weather detail -->
+    <TextView
+        android:id="@+id/textViewTemperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Temperature"
+        app:layout_constraintTop_toBottomOf="@id/textViewCityName"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewCondition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Condition"
+        app:layout_constraintTop_toBottomOf="@id/textViewTemperature"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewVisibility"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Visibility"
+        app:layout_constraintTop_toBottomOf="@id/textViewCondition"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewWindSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wind Speed"
+        app:layout_constraintTop_toBottomOf="@id/textViewVisibility"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewWindDirection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Direction"
+        app:layout_constraintTop_toBottomOf="@id/textViewWindSpeed"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewWindGust"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gust"
+        app:layout_constraintTop_toBottomOf="@id/textViewWindDirection"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Add more TextViews for pressure, humidity, etc., as needed -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
