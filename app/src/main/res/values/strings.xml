@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Kazakhstan Weather App</string>
+    <string name="welcome_message">Добро пожаловать в наш проект</string>
+    <string name="start">Начать</string>
+    <string name="weather_now">Погода сейчас</string>
+    <string name="five_day_forecast">Погода на 5 дней</string>
+    <!-- Add more strings as needed -->
+</resources>
