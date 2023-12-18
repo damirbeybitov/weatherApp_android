@@ -61,7 +61,7 @@ class FiveDayForecastFragment : Fragment() {
 
     // In FiveDayForecastFragment
     private fun displayForecastData(forecastResponse: ForecastResponse) {
-        binding.textViewCity.text = cityName
+        binding.textViewCity.text = "City: ${cityName}"
         val adapter = ForecastAdapter(forecastResponse.list)
         binding.recyclerViewForecast.adapter = adapter
         binding.recyclerViewForecast.layoutManager = LinearLayoutManager(context)

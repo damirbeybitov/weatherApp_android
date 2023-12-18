@@ -3,114 +3,115 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="8dp"
-    >
+    android:padding="16dp"
+    android:background="#FFFFFF"> <!-- White background -->
 
+    <!-- Date/Time -->
     <TextView
         android:id="@+id/textViewDateTime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/WeatherInfoTextView"
         android:text="Date/Time"
-        android:textSize="16sp"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- Temperature -->
     <TextView
         android:id="@+id/textViewTemp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/WeatherInfoTextView"
         android:text="Temperature"
-        android:textSize="16sp"
         app:layout_constraintTop_toBottomOf="@id/textViewDateTime"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- Feels Like -->
     <TextView
         android:id="@+id/textViewFeelsLike"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/WeatherInfoTextView"
         android:text="Feels Like"
-        android:textSize="16sp"
         app:layout_constraintTop_toBottomOf="@id/textViewTemp"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- Min Temp -->
     <TextView
         android:id="@+id/textViewTempMin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/WeatherInfoTextView"
         android:text="Min Temp"
-        android:textSize="16sp"
         app:layout_constraintTop_toBottomOf="@id/textViewFeelsLike"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- Max Temp -->
     <TextView
         android:id="@+id/textViewTempMax"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/WeatherInfoTextView"
         android:text="Max Temp"
-        android:textSize="16sp"
         app:layout_constraintTop_toBottomOf="@id/textViewTempMin"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- Pressure -->
     <TextView
         android:id="@+id/textViewPressure"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/WeatherInfoTextView"
         android:text="Pressure"
-        android:textSize="16sp"
         app:layout_constraintTop_toBottomOf="@id/textViewTempMax"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- Humidity -->
     <TextView
         android:id="@+id/textViewHumidity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/WeatherInfoTextView"
         android:text="Humidity"
-        android:textSize="16sp"
         app:layout_constraintTop_toBottomOf="@id/textViewPressure"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- Condition -->
     <TextView
         android:id="@+id/textViewCondition"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/WeatherInfoTextView"
         android:text="Condition"
-        android:textSize="16sp"
         app:layout_constraintTop_toBottomOf="@id/textViewHumidity"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- Visibility -->
     <TextView
         android:id="@+id/textViewVisibility"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/WeatherInfoTextView"
         android:text="Visibility"
-        android:textSize="16sp"
         app:layout_constraintTop_toBottomOf="@id/textViewCondition"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- Wind Speed -->
     <TextView
         android:id="@+id/textViewWindSpeed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/WeatherInfoTextView"
         android:text="Wind Speed"
-        android:textSize="16sp"
         app:layout_constraintTop_toBottomOf="@id/textViewVisibility"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- Wind Direction -->
     <TextView
         android:id="@+id/textViewWindDirection"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/WeatherInfoTextView"
         android:text="Wind Direction"
-        android:textSize="16sp"
         app:layout_constraintTop_toBottomOf="@id/textViewWindSpeed"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- Wind Gust -->
     <TextView
         android:id="@+id/textViewWindGust"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/WeatherInfoTextView"
         android:text="Wind Gust"
-        android:textSize="16sp"
         app:layout_constraintTop_toBottomOf="@id/textViewWindDirection"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

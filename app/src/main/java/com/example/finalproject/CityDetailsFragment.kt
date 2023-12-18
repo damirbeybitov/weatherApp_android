@@ -27,7 +27,7 @@ class CityDetailsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 //        (activity as AppCompatActivity).supportActionBar?.hide()
-        binding.textViewCityName.text = city.name
+        binding.textViewCityName.text = "City: ${city.name}"
         binding.textViewCityDescription.text = city.description
         // Setup buttons for weather now and 5-day forecast
         binding.buttonWeatherNow.setOnClickListener {

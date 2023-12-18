@@ -61,7 +61,7 @@ class CurrentWeatherFragment : Fragment() {
         binding.textViewCityName.text = "City: ${weatherResponse.name}"
         binding.textViewTemperature.text = "Temperature: ${String.format("%.1f", weatherResponse.main.temp)}°C"
         binding.textViewCondition.text = "Condition: ${weatherResponse.weather[0].main} (${weatherResponse.weather[0].description})"
-        binding.textViewVisibility.text = "Visibility: ${weatherResponse.visibility / 1000.0} km"
+        binding.textViewVisibility.text = "Visibility: ${(weatherResponse.visibility / 1000.0).format(1)} km"
         binding.textViewWindSpeed.text = "Wind Speed: ${weatherResponse.wind.speed} m/s"
         binding.textViewWindDirection.text = "Direction: ${weatherResponse.wind.deg}°"
         binding.textViewWindGust.text = "Gust: ${weatherResponse.wind.gust} m/s"
@@ -73,6 +73,7 @@ class CurrentWeatherFragment : Fragment() {
 
         // Add more TextView updates here for other data like pressure, humidity, etc.
     }
+    private fun Double.format(digits: Int) = "%.${digits}f".format(this)
 
     override fun onDestroyView() {
         super.onDestroyView()
