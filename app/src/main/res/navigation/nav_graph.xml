@@ -37,7 +37,9 @@
         <action
             android:id="@+id/action_cityDetailsFragment_to_currentWeatherFragment"
             app:destination="@id/currentWeatherFragment" />
-
+        <action
+            android:id="@+id/action_cityDetailsFragment_to_fiveDayForecastFragment"
+            app:destination="@id/fiveDayForecastFragment" />
     </fragment>
 
     <!-- CurrentWeatherFragment -->
@@ -46,6 +48,17 @@
         android:name="com.example.finalproject.CurrentWeatherFragment"
         android:label="fragment_current_weather"
         tools:layout="@layout/fragment_current_weather">
+        <argument
+            android:name="cityName"
+            app:argType="string" />
+    </fragment>
+
+    <!-- FiveDayForecastFragment -->
+    <fragment
+        android:id="@+id/fiveDayForecastFragment"
+        android:name="com.example.finalproject.FiveDayForecastFragment"
+        android:label="fragment_five_day_forecast"
+        tools:layout="@layout/fragment_five_day_forecast">
         <argument
             android:name="cityName"
             app:argType="string" />

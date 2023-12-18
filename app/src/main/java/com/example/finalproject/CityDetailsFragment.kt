@@ -33,6 +33,13 @@ class CityDetailsFragment : Fragment() {
         binding.buttonWeatherNow.setOnClickListener {
             navigateToCurrentWeather()
         }
+        binding.buttonFiveDayForecast.setOnClickListener{
+            navigateToFiveDayForecast()
+        }
+    }
+    private fun navigateToFiveDayForecast(){
+        val action = CityDetailsFragmentDirections.actionCityDetailsFragmentToFiveDayForecastFragment(city.name)
+        findNavController().navigate(action)
     }
     private fun navigateToCurrentWeather() {
         // Implement navigation logic
